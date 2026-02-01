@@ -26,7 +26,7 @@ html, body {
 }
 
 #loadScreen.play {
-    animation: loadScreen 0.5s linear forwards;
+    animation: loadScreen 2.5s linear forwards;
     pointer-events: none;
 }
 
