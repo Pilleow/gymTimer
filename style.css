@@ -26,7 +26,7 @@ html, body {
 }
 
 #loadScreen.play {
-    animation: loadScreen 2.5s linear forwards;
+    animation: loadScreen 0.5s linear forwards;
     pointer-events: none;
 }
 
@@ -100,11 +100,12 @@ html, body {
 
     width: 20.4%;
     height: 17%;
+    overflow: visible; 
 
     display: grid;
     place-items: center;
 
-    font-size: 160px;
+    font-size: min(30vw, 160px);
     font-family: "Qahiri", sans-serif;
 }
 
