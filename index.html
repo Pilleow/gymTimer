@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time Game Seweryn</title>
+
+    <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="loadScreen">
+    <p class='tapToStart'>Click to start</p>
+    <div id="aghLoadScreenIcon">
+    </div>
+</div>
+
+<div id="gameArea">
+    <div id="displayArea">
+        <div id="display">
+            <div class="screen" id="screen1"></div>
+            <div class="screen" id="screen2"></div>
+            <div class="screen" id="screen3"></div>
+        </div>
+    </div>
+
+    <div id="leverArea">
+        <svg id="linkLayer"></svg>
+        <div id="leverArm"></div>
+    </div>
+</div>
+
+<script src="screens.js"></script>
+<script src="jackpot.js"></script>
+
+</body>
+</html>

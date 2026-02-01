@@ -1,0 +1,145 @@
+/* global */
+
+body {
+    background-color: #050609;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    touch-action: none;
+}
+
+/* */
+
+/* game */
+
+/* loadScreen */
+
+#loadScreen {
+    z-index: 1000;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+
+#loadScreen.play {
+    animation: loadScreen 2.5s linear forwards;
+    pointer-events: none;
+}
+
+#loadScreen div {
+    opacity: 0;
+}
+
+#loadScreen.play div {
+    opacity: 1;
+}
+
+#aghLoadScreenIcon {
+    position:absolute;
+    top: calc(50% - min(40vw, 40vh)/2);
+    left: calc(50% - min(50vw, 50vh)/2);
+    width: min(50vw, 50vh);
+    height: min(40vw, 40vh);
+    background-image: url("assets/agh.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+#loadScreen p.tapToStart {
+    top:calc(50% - 2em);
+    position: absolute;
+    text-align: center;
+    width:100vw;
+    color: grey;
+    font-size: 2em;
+}
+
+#loadScreen.play p.tapToStart {
+    display: none;
+}
+
+@keyframes loadScreen {
+    0% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* display */
+
+#displayArea {
+    width: calc(100vw - 200px);
+    top: 50%;
+    right: 150px;
+    transform: translateY(-50%);
+    height: 70vh;
+    position: absolute;
+    touch-action: none;
+    user-select: none;
+
+    background-image: url("assets/machine.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.screen {
+    position: absolute;
+
+    width: 20.4%;
+    height: 17%;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 160px;
+    font-family: "Qahiri", sans-serif;
+}
+
+#screen1 { left: 14%; top: 40.7%; color: darkred; }
+#screen2 { left: 41%; top: 40.7%; color: darkgreen; }
+#screen3 { left: 68%; top: 40.7%; color: darkblue; }
+
+/* lever */
+
+#leverArea {
+    width: 100px;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    height: 70vh;
+    position: absolute;
+    touch-action: none;
+    user-select: none;
+}
+
+#leverArm {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 100px;
+    transition: transform 500ms ease-out;
+}
+
+#linkLayer {
+    width: 100px;
+    height: 70vh;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
